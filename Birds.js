@@ -16,18 +16,16 @@ let indexPause;//Declaring index pause to use a pause point for coincidences
 let comparativeCounter=0;//Declaring an auxiliar counter for comparing past coincidenses with new coincidences
 let type; //Declaring type to save the most repeated type
 let search;
+console.log(birdsID);
 for(let i=0; i<birdsID.length; i++){// Cicle to travel across the array
     let listLeft=birdsID; //For each new index list left returns to be the same as birdsID
     let moda=0;//For each new index moda returns to zero.
     search=birdsID[i];//Declare search as the variable used to save the ID we are looking for.
    do{
     indexPause=listLeft.indexOf(search)//Founding a coincidence of a bird ID
-    console.log(indexPause);
-    console.log(search);
         if(indexPause>=0){ //Checking out if there is a coincidence
             moda++; //If there's a coincidence moda will increment itself.
             listLeft=listLeft.slice(indexPause+1);  //If there's a coincidence we chop of the list after the coincidence, in order to look for anothe coincidence in the remaining array
-            console.log(listLeft);
         }
     } while (indexPause>=0) //The loop st0ps when there's no more coincidences
     if(moda>comparativeCounter){//Comparing the past coincidences with new coincidences
@@ -41,4 +39,4 @@ for(let i=0; i<birdsID.length; i++){// Cicle to travel across the array
         }
     }
 }
-console.log(`Type: ${type}`);//Console shows the last value saved in type.
+console.log(`Most common lowest ID Type: ${type}`);//Console shows the last value saved in type.

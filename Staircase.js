@@ -3,7 +3,7 @@
 - Input: n Where 0 < n <= 100
 - Output: A staircase of any special symbol (#, @, *, &, !, etc) right aligned composed of height n and width n
 */
-let n=6;//Declare n and asigning a value
+let n=8;//Declare n and asigning a value
 let level=[]; //Declare empty array
 if(n>0 && n<=100){//Checking 0<n<=100
     for(let j=1;j<=n;j++){  //loop for level of the stair
